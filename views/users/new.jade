@@ -1,0 +1,25 @@
+extends ../layout
+
+block nav_bg
+  nav.navbar.navbar-space
+
+block content
+  .container
+    h1 Sign up to become a Unicorn
+    form(action="/users",method="post")
+      .form-group
+        label Tell us your name:
+        input.form-control(type='text', name="username", placeholder='Pick a new name everytime for data base testing please')
+      .form-group
+        label Enter Your E-mail Address:
+        input.form-control(type='text', name="email", placeholder='please use a different email and phone number pair if signing up more than once')
+      .form-group
+        label Enter a password:
+        input.form-control(type='password', name="password")
+      .form-group
+        label Country code:
+        input#authy-countries.form-control(type='text', name="countryCode")
+      .form-group
+        label Phone number:
+        input.form-control(type='text', name="phoneNumber")
+      button.btn.btn-primary(type='submit') Sign up
